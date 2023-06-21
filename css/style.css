@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+:root{
+    --yellow: #fcdd26;
+    --white: #fff;
+    --grey: #333;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0;
+    border: none; outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+*::selection{
+    background: var(--yellow);
+    color: var(--grey);
+}
+
+section{
+    padding: 2rem 5%;
+}
+
+html::-webkit-scrollbar{
+    width: 1.2rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: var(--grey);
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--yellow);
+    border-radius: .5rem;
+}
+
+.btn{
+    background: var(--yellow);
+    font-size: 1.2rem;
+    color: var(--grey);
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    box-shadow: 0  0 1rem rgba(0, 0, 0, .3);
+    text-align: center;
+    display: inline-block;
+}
+
+.btn:hover{
+    background: var(--grey);
+    color: var(--yellow);
+}
+
+
+.heading{
+    text-align: center;
+    font-size: 2rem;
+    color: var(--grey);
+    padding: 2rem 0;
+}
+
+.heading i{
+    font-size: 2.2rem;
+    color: var(--yellow);
+}
+/* ......... Header ...... */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    z-index: 999;
+    background: var(--white);
+}
+
+header .logo{
+    font-size: 2rem;
+    color: var(--grey);
+    font-weight: bold;
+}
+
+header .logo i{
+    font-size: 2.3rem;
+    color: var(--yellow);
+    transform: rotate(-65deg);
+}
+
+header .logo i:hover{
+    color: var(--grey);
+}
+
+header .navbar a{
+    font-size: 1.6rem;
+    color: var(--grey);
+    margin-right: 1.5rem;
+}
+
+header .navbar a:hover{
+    color: var(--yellow);
+    text-decoration: underline;
+}
+
+header .icons i{
+    font-size: 1.5rem;
+    color: var(--grey);
+    margin-left: .5rem;
+}
+
+header .icons i:hover{
+    color: var(--yellow);
+    cursor: pointer;
+}
+
+header .search-bar{
+    position: absolute;
+    top: 100%; left: 0; width: 100%;
+    background: var(--yellow);
+    display: flex;
+    align-items: center;
+    /* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
+    transform: scale(0);
+}
+
+header .search-bar.active{
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
+    transform: scale(1);
+}
+
+header .search-bar input{
+    width: 100%;
+    margin: .7rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    font-size: 1.3rem;
+    color: var(--grey);
+    text-transform: none;
+    margin-right: .5rem;
+}
+
+header .search-bar input::placeholder{
+    text-transform: capitalize;
+}
+
+header .search-bar label{
+    font-size: 1.5rem;
+    color: var(--grey);
+    cursor: pointer;
+    margin-right: .5rem;
+}
+
+/* .......... Home ........... */
+
+.home{
+    margin-top: 9rem;
+    height: 80vh;
+    background: url(../images/home-bg.webp) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.home .content{
+    padding-left: 3rem;
+} 
+
+.home .content p{
+    font-size: 2rem;
+    color: var(--grey);
+}
+
+.home .content h1{
+    font-size: 5rem;
+    color: var(--grey);
+}
+
+.home .content .btn{
+    background: var(--white);
+    margin-left: 1.5rem;
+}
+
+.home .content .btn:hover{
+    background: var(--grey);
+}
+
+/* ............ Category ........... */
+
+.category .inner{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.category .inner .box{
+    width: 23%;
+    text-align: center;
+}
+
+.category .inner .box img{
+    width: 100%;
+}
+
+.category .inner .box h3{
+    font-size: 1.5rem;
+    color: var(--grey);
+    margin-bottom: .5rem;
+}
+
+/* ...........featured.... */
+.featurid .content {
+    display: flex;
+    justify-content: space-between;
+}
+.featurid .content .box{
+    flex-wrap: wrap;
+    width: 49%;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, .3);
+    display: flex;
+}
+.featurid .content .box img{
+    width: 35%;
+    border-radius: 2rem;
+}
+.featurid .content .box .inner{
+    margin-top: 3rem;
+}
+.featurid .content .box .inner i{
+    color: var(--yellow);
+
+}
+.featurid .content .box .inner h3{
+    margin: 1.5rem 0;
+}
+.featurid .content .box  .inner p{
+    margin-bottom: .8rem;
+}
+.featurid .content .box .price {
+    position: absolute;
+}
+.featurid .content .box .price p{
+    position: relative;
+    top: 18px;
+    left: 486px;
+    background: var(--yellow);
+    height: 5.5rem;
+    width: 5.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+/* ....food.....*/
+
+.food{
+    background: url(../images/deal-bg.webp) no-repeat center;
+    margin-top: 1rem;
+    height: 80vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.food .content{
+   text-align: center;
+   margin: 0 auto;
+}
+.food .content p{
+    color: var(--white);
+    font-size: 2rem;
+}
+.food .content h3{
+    font-weight: bold;
+    font-size: 3.5rem;
+}
+/* ..products.. */
+
+.products .content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.products .content .box{
+    width: 23%;
+    display: flex;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, .3);
+}
+
+.products .content .box img{
+    border-radius: 2rem;
+    width: 50%;
+}
+.products .content .box .inner .icons i{
+    color: var(--yellow);
+}
+
+
+
+
+
+
+
+
+
+
+
